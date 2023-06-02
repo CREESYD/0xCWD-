@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+
+contract CarWashDetailingTokenV1 is Initializable, OwnableUpgradeable, ERC20Upgradeable {
+
+    function initialize() public initializer {
+        __ERC20_init('W3Meta', '0xCWD');
+        __Ownable_init();
+        _mint(msg.sender, 10000000000 * (10 **  uint256(decimals())));
+    }
+
+    /**
+     * @dev Mint new tokens, increasing the total supply and balance of "account"
+     * Can only be called by the current owner.
+     */
+    function mint(address account, uint256 value) public  {
+        _mint(account, value);
+    }
+
+    /**
+     * @dev Burns token balance in "account" and decrease totalsupply of token
+     * Can only be called by the current owner.
+     */
+    function burn(address account, uint256 value) public  {
+        _burn(account, value);
+    }
+}

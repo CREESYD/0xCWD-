@@ -1,0 +1,70 @@
+https://blog.chain.link/how-to-verify-smart-contract-on-etherscan-hardhat/
+https://blog.logrocket.com/using-uups-proxy-pattern-upgrade-smart-contracts/
+
+npx hardhat node
+npx hardhat compile
+npx hardhat run --network localhost scripts/deploy.js
+npx hardhat --network bscTestnet verify 0x1bd62Cd83034FB2b7eE28cac64c30834A176dee8
+
+npx hardhat run scripts/deploy.js --network bscTestnet
+
+npx hardhat verify --network bscTestnet 0xaE72F7edF15A11b252FE316e44E9dfc579Daf77e
+
+
+
+npx hardhat run scripts/upgrade_MyToken_v2.js --network bscTestnet
+npx hardhat verify --network bscTestnet 0xaE72F7edF15A11b252FE316e44E9dfc579Daf77e
+
+
+
+=============
+goerli
+{
+    "API_URL" : "https://goerli.infura.io/v3/d073750691ce4e79a561c7740f4efb71",
+    "PRIVATE_KEY": "1fe1933a0ea47c4d2d5489f9939b37884c3e4f7339d72c84e30754ced97cee47",
+    "NETWORK_ID" : 5,
+    "API_KEY" : "IUCPTMSVG8S6GY6CQS3E1PKQUB7TH5QGJG"
+}
+
+bscscan:
+{
+    "API_URL" : "https://data-seed-prebsc-1-s1.binance.org:8545",
+    "PRIVATE_KEY": "1fe1933a0ea47c4d2d5489f9939b37884c3e4f7339d72c84e30754ced97cee47",
+    "NETWORK_ID" : 97,
+    "API_KEY" : "F3DXB1NDQZC6G8N2HMM2RTBRR6CUMR2XEX",
+    "gasPrice" : 20000000000
+}
+
+https://goerli.etherscan.io/address/0x8d89bc742b1c7eefaf4e0ed870ac4ea27d9e272a#code
+
+https://goerli.etherscan.io/address/0xd837b2a71c6b51e1d9d845d38df5a60ef3654042#code
+
+
+
+
+account 68
+goerli
+
+{
+    "API_URL" : "https://goerli.infura.io/v3/d073750691ce4e79a561c7740f4efb71",
+    "PRIVATE_KEY": "776fd2806ef60cd30431f39d77e7fa883a5867f8315e088729212dbcab7ff2a8",
+    "NETWORK_ID" : 5,
+    "API_KEY" : "IUCPTMSVG8S6GY6CQS3E1PKQUB7TH5QGJG"
+}
+
+bscscan
+{
+    "API_URL" : "https://data-seed-prebsc-1-s1.binance.org:8545",
+    "PRIVATE_KEY": "776fd2806ef60cd30431f39d77e7fa883a5867f8315e088729212dbcab7ff2a8",
+    "NETWORK_ID" : 97,
+    "API_KEY" : "F3DXB1NDQZC6G8N2HMM2RTBRR6CUMR2XEX",
+    "gasPrice" : 20000000000
+}
+
+
+
+npx hardhat node
+npx hardhat compile
+npx hardhat run --network networkName scripts/deploy.js
+npx hardhat verify --network networkName address
+npx hardhat verify --list-networks
